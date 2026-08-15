@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Studio | Productos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+    <div id="sidemenu-placeholder"></div>
+    <div id="cart-placeholder"></div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="products-section">
+            <h1 class="page-title">Nuestros productos</h1>
+            <div class="filters-bar">
+                <div class="category-filters" id="categoryFilters">
+                    <button data-cat="todos" class="filter-btn active">Todos</button>
+                    <button data-cat="Press On" class="filter-btn">Press On</button>
+                    <button data-cat="Kit Especial" class="filter-btn">Kits</button>
+                    <button data-cat="Accesorios" class="filter-btn">Accesorios</button>
+                </div>
+                <div class="sort-filter">
+                    <label>Ordenar:</label>
+                    <select id="sortSelect">
+                        <option value="default">Relevancia</option>
+                        <option value="price-asc">Menor precio</option>
+                        <option value="price-desc">Mayor precio</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="toastMsg" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

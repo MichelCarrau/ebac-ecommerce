@@ -1,0 +1,125 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: $shadow-sm;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__hamburger {
+        font-size: 1.5rem;
+        background: $gray-light;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        @include flex-center;
+        transition: $transition;
+        color: $primary-dark;
+
+        &:hover {
+            background: $primary-light;
+            transform: scale(1.05);
+        }
+    }
+
+    &__logo {
+        a {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: $primary-dark;
+        }
+    }
+
+    &__nav {
+        flex: 1;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        list-style: none;
+
+        a {
+            font-weight: 600;
+            transition: $transition;
+            &:hover {
+                color: $primary-dark;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__search {
+        display: flex;
+        background: $gray-light;
+        border-radius: 2rem;
+        overflow: hidden;
+        border: 1px solid $gray-border;
+
+        input {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 180px;
+        }
+
+        button {
+            background: $primary;
+            color: white;
+            padding: 0 1.2rem;
+            &:hover {
+                background: $primary-dark;
+            }
+        }
+    }
+
+    &__cart-btn {
+        position: relative;
+        font-size: 1.5rem;
+        background: $gray-light;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        @include flex-center;
+        transition: $transition;
+        color: $primary-dark;
+
+        &:hover {
+            background: $primary-light;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: $primary-dark;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    @include flex-center;
+}

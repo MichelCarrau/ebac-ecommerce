@@ -1,0 +1,143 @@
+.btn {
+    @include button-base;
+    &--primary {
+        background: linear-gradient(135deg, $primary, $primary-dark);
+        color: white;
+        box-shadow: $shadow-sm;
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+        }
+    }
+    &--secondary {
+        background: $gray-light;
+        color: #333;
+        border: 1px solid $gray-border;
+        &:hover {
+            background: $gray-border;
+        }
+    }
+}
+
+.hero {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8d4e4 50%, #fce4ec 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 3rem 3rem;
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        color: $primary-dark;
+    }
+    p {
+        max-width: 600px;
+        margin: 0 auto 1.8rem;
+        color: #4a4a6a;
+        font-size: 1.1rem;
+    }
+}
+
+.products-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: $secondary;
+}
+
+.filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.category-filters {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.3rem;
+    border-radius: 2rem;
+    background: $gray-light;
+    transition: $transition;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    &.active,
+    &:hover {
+        background: linear-gradient(135deg, $primary, $primary-dark);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: $shadow-sm;
+    }
+}
+
+.products-grid {
+    @include grid-responsive;
+}
+
+.product-card {
+    background: white;
+    border-radius: $radius;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    transition: $transition;
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-lg;
+    }
+    &__img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: $transition;
+    }
+    &:hover &__img {
+        transform: scale(1.05);
+    }
+    &__info {
+        padding: 1.2rem;
+    }
+    &__title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        color: $secondary;
+    }
+    &__desc {
+        font-size: 0.85rem;
+        color: #6c757d;
+        margin: 0.5rem 0;
+    }
+    &__price {
+        font-weight: 800;
+        color: $primary-dark;
+        font-size: 1.3rem;
+        margin: 0.5rem 0;
+    }
+    &__button {
+        width: 100%;
+        background: linear-gradient(135deg, $primary, $primary-dark);
+        color: white;
+        padding: 0.7rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        transition: $transition;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: $shadow-sm;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+// 1. Variables
+@import 'variables';
+
+// 2. Mixins
+@import 'mixins';
+
+// 3. Base
+@import 'base';
+
+// 4. Componentes
+@import 'header';
+@import 'carrito';
+@import 'productos';
+@import 'footer';
+
+// 5. Responsive
+@include mobile {
+    .header__nav {
+        display: none;
+    }
+    .header__search input {
+        width: 120px;
+    }
+    .cart-sidebar {
+        width: 300px;
+    }
+    .side-menu {
+        width: 280px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
