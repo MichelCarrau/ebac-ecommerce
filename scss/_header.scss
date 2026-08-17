@@ -123,3 +123,25 @@
     border-radius: 50%;
     @include flex-center;
 }
+
+@include mobile {
+    .header__nav {
+        display: none;
+    }
+    .header__search input {
+        width: 120px;
+    }
+    .cart-sidebar {
+        width: 300px;
+    }
+    .side-menu {
+        width: 280px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
