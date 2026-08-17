@@ -451,6 +451,79 @@ img {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+/* ============================================
+   INFO SECTION (Envíos, Atención, Pagos)
+   ============================================ */
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(232, 67, 147, 0.08);
+}
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.info-card i {
+  font-size: 2.5rem;
+  color: #e84393;
+  background: #fce4ec;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+.info-card p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .info-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .info-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .info-card {
+    padding: 1.5rem;
+  }
+  .info-card i {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+  .info-card p {
+    font-size: 0.9rem;
+  }
+}
 /* Ubicación y Opiniones (migrado desde styles.css) */
 .location-section {
   max-width: 1200px;

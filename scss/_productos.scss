@@ -141,3 +141,88 @@
         }
     }
 }
+
+/* ============================================
+   INFO SECTION (Envíos, Atención, Pagos)
+   ============================================ */
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.info-card {
+    background: white;
+    border-radius: $radius;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: $shadow-sm;
+    transition: $transition;
+    border: 1px solid rgba(232, 67, 147, 0.08);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-md;
+    }
+
+    i {
+        font-size: 2.5rem;
+        color: $primary-dark;
+        background: $primary-light;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $secondary;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+// Responsive para info-section
+@include tablet {
+    .info-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@include mobile {
+    .info-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+
+        i {
+            font-size: 2rem;
+            padding: 0.8rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
